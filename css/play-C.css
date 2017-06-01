@@ -1,0 +1,242 @@
+* {
+    margin: 0px;
+    border-radius: 10%;
+    color: white;
+    text-align: center;
+    font-family: "Microsoft YaHei", "Î¢ÈíÑÅºÚ", "Microsoft JhengHei", "»ªÎÄºÚÌå", arial, sans-serif, STHeiti, sans-serif;
+
+}
+
+#background {
+    width: 1350px;
+    height: 662px;
+    margin: 0 auto;
+    background-color: #e5e5e5;
+    position: relative;
+    border-radius: 0;
+}
+
+#background img {
+    width: 1153px;
+    height: 662px;
+}
+
+#game {
+    /*border: 1px solid #000;*/
+    width: 280px;
+    height: 499px;
+    border-radius: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 77px;
+    left: 532px;
+    background-color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#title1 {
+    width: 270px;
+    height: 80px;
+    margin: 25px auto 20px;
+    border-radius: 0;
+    /*border: 1px solid #000;*/
+}
+
+.title2048 {
+    /*border: 1px solid #000;*/
+    width: 73px;
+    height: 73px;
+    margin: 3px;
+    margin-left: 4px;
+    /*margin-left: 20px;*/
+    float: left;
+    line-height: 73px;
+    font-size: 28px;;
+    font-weight: bold;
+    background-color: #ffea6d;
+}
+
+.title-left {
+    width: 76px;
+    height: 72.6px;
+    margin: 3px 8px 3px 10px;
+    float: left;
+}
+
+.title-right {
+    width: 82.5px;
+
+    height: 72.6px;
+    margin: 3px;
+    float: right;
+}
+
+.tr1 {
+    width: 66px;
+    height: 39.6px;
+    margin: 3px;
+    background-color: #eae9c7;
+
+}
+
+.tr1 span {
+    line-height: 18px;
+    display: inline-block;
+
+}
+
+.span1 {
+    font-size: 7px;
+    color: #f8ffed;
+}
+
+.span2 {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.span3 {
+    color: white;
+    font-size: 12px;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.tr2 {
+    width: 66px;
+    height: 26.5px;
+    margin: 3px;
+    background-color: #ffd176;
+}
+
+#game-main {
+    width: 270px;
+    height: 270px;
+    /*border: 1px solid #000;*/
+    margin: auto;
+    border-radius: 3%;
+    /*position: absolute;*/
+    /*background-color: #fffece;*/
+}
+
+#game-main div {
+    width: 57px;
+    height: 57px;
+    /*border: 1px solid #000;*/
+    float: left;
+    /*position: relative;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-top: 2px;;
+    /*margin-left: 2px;*/
+
+}
+
+#title2 {
+    width: 264px;
+    height: 16px;
+    font-size: 14px;
+    color: #c19024;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    line-height: 16px;
+    text-align: left;
+    font-weight: 500;
+
+}
+
+.bg {
+    background: #edecca;
+
+}
+
+.bg2 {
+    font-size: 46px;
+    background: #c8eba5;
+    background-size: 140px;
+    text-align: center;
+    line-height: 57px;
+
+}
+
+.bg4 {
+    font-size: 46px;
+    line-height: 57px;
+
+    background: #f1bfcf;
+    text-align: center;
+}
+
+.bg8 {
+    font-size: 46px;
+    background: #dda5f5;
+    text-align: center;
+    line-height: 57px;
+
+}
+
+.bg16 {
+    font-size: 33px;
+    background: #bc99fc;
+    line-height: 57px;
+
+    text-align: center;
+}
+
+.bg32 {
+    font-size: 33px;
+    background: #b2a4e1;
+    text-align: center;
+    line-height: 57px;
+
+}
+
+.bg64 {
+    font-size: 33px;
+    background: #73a7da;
+    line-height: 57px;
+
+    text-align: center;
+}
+
+.bg128 {
+    font-size: 26px;
+    background: #cd63b8;
+    text-align: center;
+    line-height: 57px;
+
+}
+
+.bg256 {
+    font-size: 26px;
+    background: #b577cd;
+    text-align: center;
+    line-height: 57px;
+
+}
+
+.bg512 {
+    font-size: 26px;
+    background: #a4cdb9;
+    line-height: 57px;
+
+    text-align: center;
+}
+
+.bg1024 {
+    font-size: 18px;
+    background: #95c5cd;
+    text-align: center;
+    line-height: 57px;
+
+}
+
+.bg2048 {
+    font-size: 18px;
+    background: #cda550;
+    text-align: center;
+}

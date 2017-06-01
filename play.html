@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <link rel="stylesheet" href="css/play-C.css"/>
+    <style>
+
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        var arrRC = [
+            [0, 1, 2, 3],
+            [4, 5, 6, 7],
+            [8, 9, 10, 11],
+            [12, 13, 14, 15]
+        ];
+        //                alert(arrRC[3][1]);
+        var arr = [2, 4];
+        var ranNum = parseInt(Math.random() * 2);
+        //        alert(arr[ranNum]);
+
+        function createNum() {
+            getDivEmpty();
+            var divRan = parseInt(Math.random() * resultArr.length);
+            resultArr[divRan].innerHTML = arr[ranNum];  //需要获取空的div
+        }
+
+        var resultArr = [];
+
+        function getDivEmpty() {
+            var divs = $("#game-main div");
+            resultArr = [];
+            for (var i = 0; i < divs.length; i++) {
+                if (divs[i].innerText == "") {
+                    resultArr.push(divs[i]);
+                }
+            }
+        }
+
+
+        // 刷新页面
+        function refash() {
+            var arrDiv = $("#game-main div");
+            for (var i = 0; i < arrDiv.length; i++) {
+                arrDiv[i].className = "bg" + arrDiv[i].innerText;
+            }
+        }
+
+
+        //    两行之间合并
+        function rowMA(row1, row2) {
+            var row1Index = arrRC[row1];
+            var row2Index = arrRC[row2];
+            var divs = $("#game-main div")
+            for (var i = 0; i < row1Index.length; i++) {
+                if (divs[row2Index[i]].innerText == "") {
+                    //不变
+                } else if (
+                        divs[row1Index[i]].innerText == "") {
+                    divs[row1Index[i]].innerHTML = divs[row2Index[i]].innerText;
+                    divs[row2Index[i]].innerHTML = ""
+//                    $("#div1").css("top","50px")
+
+                } else if (divs[row1Index[i]].innerText == divs[row2Index[i]].innerText) {
+                    var num1 = parseInt(divs[row1Index[i]].innerText);
+                    var num2 = parseInt(divs[row2Index[i]].innerText);
+                    divs[row1Index[i]].innerHTML = (num1 + num2);
+                    divs[row2Index[i]].innerHTML = "";
+
+                }
+            }
+        }
+
+        function colMA(col1, col2) {
+            var divs = $("#game-main div");
+            for (var i = 0; i < arrRC.length; i++) {
+                var col1Index = arrRC[i][col1];
+                var col2Index = arrRC[i][col2];
+                if (divs[col2Index].innerText == "") {
+
+                } else if (divs[col1Index].innerText == "") {
+                    divs[col1Index].innerHTML = divs[col2Index].innerText;
+                    divs[col2Index].innerHTML = "";
+                } else if (divs[col2Index].innerText == divs[col1Index].innerText) {
+                    var num1 = parseInt(divs[col1Index].innerText);
+                    var num2 = parseInt(divs[col2Index].innerText);
+                    divs[col1Index].innerHTML = (num1 + num2);
+                    divs[col2Index].innerHTML = "";
+                }
+            }
+        }
+
+        $(function () {
+            createNum();
+            createNum();
+            refash();
+
+
+            $(document).keyup(function (e) {
+                var ev = e || window.event;
+                switch (ev.keyCode) {
+                    case 38:
+                        for (var i = 0; i < 3; i++) {
+                            rowMA(2, 3);
+                            rowMA(1, 2);
+                            rowMA(0, 1);
+                        }
+                        createNum();
+                        refash();
+                        break;
+                    case 40:
+                        for (var i = 0; i < 3; i++) {
+                            rowMA(1, 0);
+                            rowMA(2, 1);
+                            rowMA(3, 2);
+                        }
+                        createNum();
+                        refash();
+                        break
+                    case 37:
+                        for (var i = 0; i < 3; i++) {
+                            colMA(2, 3);
+                            colMA(1, 2);
+                            colMA(0, 1);
+                        }
+                        createNum();
+                        refash();
+                        break;
+                    case 39:
+                        for (var i = 0; i < 3; i++) {
+                            colMA(1, 0);
+                            colMA(2, 1);
+                            colMA(3, 2);
+                        }
+                        createNum();
+                        refash();
+                        break;
+
+
+                }
+
+            });
+            //点击事件
+
+            $("#span-e").click(function () {
+                alert("使用该应用程序时必须联网。")
+
+
+            })
+        });
+        createNum();
+
+
+    </script>
+</head>
+<body>
+<div id="background">
+    <img src="images/00005.png" alt=""/>
+
+    <div id="game">
+        <div id="title1">
+            <div class="title2048">
+                <span>2048</span>
+            </div>
+            <div class="title-left">
+                <div class="source1 tr1">
+                    <span class="span1">分数</span>
+                    <br/>
+                    <span class="span2">0</span>
+                </div>
+                <div class="menu tr2">
+                    <span class="span3"><a href="index3.html">退出</a></span>
+                </div>
+            </div>
+            <div class="title-right">
+                <div class="maxsource tr1">
+                    <span class="span1">历史最高分</span>
+                    <br/>
+                    <span class="span2">3254</span>
+                </div>
+                <div class="t-line tr2">
+                    <span id="span-e" class="span3">排行榜</span>
+                </div>
+            </div>
+
+        </div>
+        <div><p id="title2">合并这些数字以得到2048方块！</p></div>
+        <div id="game-main">
+            <div id="div1"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

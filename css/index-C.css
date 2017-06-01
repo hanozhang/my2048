@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", arial, sans-serif, STHeiti, sans-serif;
+    color: white;
+
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#back-grund {
+    width: 1350px;
+    height: 662px;
+    margin: 0 auto;
+    background-color: #e5e5e5;
+    position: relative;
+}
+
+#home {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 645px;
+    bottom: 21px;
+    cursor: pointer;
+
+}
+
+#back-grund img {
+    width: 1153px;
+    height: 662px;
+}
+
+#backgrund1 {
+    width: 278px;
+    height: 499px;
+    background: url("../images/201701.png");
+    /*border: 1px solid #000;*/
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-size: 100% 100%;
+    top: -588px;
+    left: -4px;
+    /*z-index: 5000;*/
+}
+
+#black-lock {
+    width: 284px;
+    height: 502px;
+    /*background: url("images/0005.png");*/
+    /*background-repeat: no-repeat;*/
+    background-color: #000000;
+    /*position: absolute;*/
+    background-size: 100% 100%;
+}
+
+#lock1 {
+    width: 284px;
+    height: 502px;
+    background: url("../images/0005.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 100% 100%;
+
+    /*display: none;*/
+    /*调试*/
+}
+
+.icon {
+    height: 59px;
+    width: 45px;
+    position: absolute;
+    top: 20px;
+    left: 19px;
+    cursor: pointer;
+}
+
+.icon1 {
+    height: 59px;
+    width: 45px;
+    position: absolute;
+    top: 20px;
+    left: 83px;
+    cursor: pointer;
+}
+
+#main {
+    background-color: #f1f1f1;
+    width: 284px;
+    height: 500px;
+    /*border: 4px solid #787878;*/
+    margin: 0 auto;
+    position: absolute;
+    z-index: 9;
+
+}
+
+#start {
+    cursor: pointer;
+}
+
+#img {
+    width: 180px;
+    height: 170px;
+    margin: 50px auto 100px auto;
+    border-radius: 10%;
+    line-height: 170px;
+    font-size: 70px;;
+    font-weight: bold;
+    background-color: #ffea6d;
+}
+
+.menu1 {
+    width: 150px;
+    height: 40px;
+    background-color: #408aff;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 10px auto 20px auto;
+    border-radius: 6px;
+
+}
+
+.bottom1 {
+    /*border: 1px solid #000;*/
+    width: 735px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bottom1 p {
+    color: #787878;
+    line-height: 40px;
+}
+
+#about {
+    /*border: 1px solid #000;*/
+    cursor: pointer;
+}
+
+#aboutimg {
+    height: 500px;
+    width: 835px;
+    /*border: 1px solid #000;*/
+
+    position: relative;
+    left: 765px;
+    z-index: 99;
+}
+
+#aboutimg img {
+    float: left;
+    height: 500px;
+    width: 278px;
+}
+
+#next {
+    width: 2300px;
+    height: 100px;
+    /*border: 1px solid #000;*/
+    /*float: left;*/
+    position: absolute;
+    bottom: 0;
+}
+
+#start1 {
+    width: 170px;
+    height: 55px;
+    /*border: 1px solid #000;*/
+    position: absolute;
+    right: 55px;
+    bottom: 96px;
+    cursor: pointer;
+}
